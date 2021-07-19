@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.carloosx.gesturerecorder.MainActivity"
+    android:background="#34495e">
+
+    <ToggleButton
+        android:id="@+id/toggleRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:minWidth="120dp"
+        android:textOn="STOP"
+        android:textOff="START"
+        android:textColor="@android:color/white"
+        android:background="@android:color/transparent"/>
+
+    <Spinner
+        android:id="@+id/spinLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/toggleRec"
+        android:layout_alignTop="@id/toggleRec"
+        android:layout_alignBottom="@id/toggleRec"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/txtStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/toggleRec"
+        android:layout_alignTop="@id/toggleRec"
+        android:layout_alignBottom="@id/toggleRec"
+        android:layout_marginRight="10dp"
+        android:textSize="12sp"
+        tools:text="Pos: 1.001/3.002 s\nSamples: 1000"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:layout_marginTop="5dp"
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/toggleRec" />
+</RelativeLayout>
